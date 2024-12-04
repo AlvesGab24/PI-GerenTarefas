@@ -106,4 +106,5 @@ document.getElementById('generate').addEventListener('click', function() {
             const brand = item.querySelector('div').textContent.split('Marca: ')[1].split('\n')[0];
             if (brandCount[brand]) {
                 brandCount[brand]++;
-            } else
+            } else {
+                brand
