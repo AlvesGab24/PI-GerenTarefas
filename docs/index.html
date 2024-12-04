@@ -3,21 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerenciador de Tarefas</title>
+    <title>Controle de Estoque</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Gerenciador de Tarefas</h1>
-        <form id="task-form">
-            <input type="text" id="task-input" placeholder="Adicionar nova tarefa" required>
-            <input type="date" id="task-date" required>
-            <input type="time" id="task-time" required>
-            <button type="submit">Adicionar</button>
-        </form>
-        <h2>Minhas Tarefas</h2>
-        <ul id="task-list"></ul>
+        <h1>Bem vinda ao seu estoque!</h1>
+        <button id="go-to-stock">Ir para o Estoque</button>
     </div>
+
+    <div class="stock-container" style="display: none;">
+        <h2>Controle de Estoque</h2>
+        <button id="add-item">Cadastrar Novo Item</button>
+        <form id="stock-form" style="display: none;">
+            <input type="text" id="item-name" placeholder="Nome" required>
+            <input type="text" id="item-brand" placeholder="Marca" required>
+            <input type="text" id="item-color" placeholder="Cor" required>
+            <input type="text" id="item-fabric" placeholder="Tecido" required>
+            <input type="number" id="item-quantity" placeholder="Quantidade" required>
+            <input type="number" id="item-cost" placeholder="Valor de Custo" required>
+            <input type="number" id="item-price" placeholder="Valor de Venda" required>
+            <input type="number" id="item-sold" placeholder="Vendidas" required>
+            <button type="submit">Adicionar ao Estoque</button>
+        </form>
+        <ul id="stock-list"></ul>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
