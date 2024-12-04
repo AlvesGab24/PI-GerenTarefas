@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #5d001e;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,46 +9,50 @@ body {
     margin: 0;
 }
 
-.container {
-    background: white;
+.container, .stock-container {
+    background: #7a002b;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 400px;
+    text-align: center;
 }
 
 h1, h2 {
     margin-bottom: 20px;
-    text-align: center;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background: #ff4d6d;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #e60039;
 }
 
 form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-top: 20px;
 }
 
-input, button {
+input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-button {
-    background: #28a745;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-button:hover {
-    background: #218838;
-}
-
 ul {
     list-style: none;
     padding: 0;
+    margin-top: 20px;
 }
 
 li {
@@ -59,20 +64,11 @@ li {
     align-items: center;
     margin-bottom: 10px;
     border-radius: 5px;
+    color: #000;
 }
 
 li:nth-child(odd) {
     background: #efefef;
-}
-
-.task-details {
-    display: flex;
-    flex-direction: column;
-}
-
-.task-details span {
-    font-size: 0.9em;
-    color: #555;
 }
 
 .delete-btn {
@@ -88,4 +84,3 @@ li:nth-child(odd) {
 .delete-btn:hover {
     background: #c82333;
 }
-
