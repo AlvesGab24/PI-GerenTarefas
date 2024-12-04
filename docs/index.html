@@ -27,7 +27,15 @@
             <input type="number" id="item-sold" placeholder="Vendidas" required>
             <button type="submit">Adicionar ao Estoque</button>
         </form>
+        <button id="generate-report">Gerar Relatório</button>
+        <div id="report-options" style="display: none;">
+            <label><input type="checkbox" id="report-total-items"> Total de Peças</label>
+            <label><input type="checkbox" id="report-colors"> Cores Mais Comuns</label>
+            <label><input type="checkbox" id="report-brands"> Marcas Mais Comuns</label>
+            <button id="generate">Gerar</button>
+        </div>
         <ul id="stock-list"></ul>
+        <div id="report" style="display: none;"></div>
     </div>
 
     <script src="script.js"></script>
