@@ -84,3 +84,17 @@ li:nth-child(odd) {
 .delete-btn:hover {
     background: #c82333;
 }
+
+.details-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.details-btn:hover {
+    background: #0056b3;
+}
