@@ -23,21 +23,42 @@ document.getElementById('stock-form').addEventListener('submit', function(e) {
     li.innerHTML = `
         <div>
             <strong>Nome:</strong> ${itemName} <br>
-            <strong>Marca:</strong> ${itemBrand} <br>
-            <strong>Cor:</strong> ${itemColor} <br>
-            <strong>Tecido:</strong> ${itemFabric} <br>
-            <strong>Quantidade:</strong> ${itemQuantity} <br>
-            <strong>Valor de Custo:</strong> ${itemCost} <br>
             <strong>Valor de Venda:</strong> ${itemPrice} <br>
             <strong>Vendidas:</strong> ${itemSold}
         </div>
+        <button class="details-btn">Detalhes</button>
         <button class="delete-btn">Excluir</button>
     `;
     li.querySelector('.delete-btn').addEventListener('click', function() {
         stockList.removeChild(li);
     });
+    li.querySelector('.details-btn').addEventListener('click', function() {
+        alert(`
+            Nome: ${itemName}
+            Marca: ${itemBrand}
+            Cor: ${itemColor}
+            Tecido: ${itemFabric}
+            Quantidade: ${itemQuantity}
+            Valor de Custo: ${itemCost}
+            Valor de Venda: ${itemPrice}
+            Vendidas: ${itemSold}
+        `);
+    });
     stockList.appendChild(li);
 
     document.getElementById('stock-form').reset();
     document.getElementById('stock-form').style.display = 'none';
+});
+
+document.getElementById('search-bar').addEventListener('input', function() {
+    const searchValue = this.value.toLowerCase();
+    const items = document.querySelectorAll('#stock-list li');
+    items.forEach(function(item) {
+        const itemName = item.querySelector('div').textContent.toLowerCase();
+        if (itemName.includes(searchValue)) {
+            item.style.display = '';
+        } else {
+            item.style.display = 'none';
+        }
+    });
 });
